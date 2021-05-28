@@ -1,0 +1,18 @@
+USE master
+GO
+CREATE DATABASE roofstock_JoseDavidSolis
+GO
+USE roofstock_JoseDavidSolis
+GO
+CREATE TABLE [dbo].[Properties](
+	[ID] [int]  NOT NULL,
+	[ADDRESS] [varchar](500) NOT NULL,
+	[YEAR_BUILT] [int] NULL,
+	[LIST_PRICE] [decimal](18, 2) NULL,
+	[MONTHLY_RENT] [decimal](18, 2) NULL,
+ CONSTRAINT [PK_Properties] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
