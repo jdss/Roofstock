@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "roofstock_JoseDavidSolis", "roofstock_JoseDavidSolis\roofstock_JoseDavidSolis.csproj", "{AAEB5E23-E659-491B-ABB7-36047FCCBC9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAEB5E23-E659-491B-ABB7-36047FCCBC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAEB5E23-E659-491B-ABB7-36047FCCBC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAEB5E23-E659-491B-ABB7-36047FCCBC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAEB5E23-E659-491B-ABB7-36047FCCBC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A9AA6EE-6B56-450D-B187-78DBF62FDA71}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jdss95.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = roofstock_JoseDavidSolis\\roofstock_JoseDavidSolis.csproj
+		SccProjectName1 = roofstock_JoseDavidSolis
+		SccLocalPath1 = roofstock_JoseDavidSolis
+	EndGlobalSection
+EndGlobal

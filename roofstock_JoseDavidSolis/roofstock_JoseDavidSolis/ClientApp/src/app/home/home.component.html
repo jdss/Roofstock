@@ -1,0 +1,66 @@
+<h1>Solution</h1>
+<hr/>
+
+<br/>
+<h2>API</h2>
+
+
+<table class="table table-striped table-hover" *ngIf="!cargando" >
+    <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Address</th>
+    <th scope="col">Year Built</th>
+    <th scope="col">List Price $</th>
+    <th scope="col">Monthly Rent $</th>
+    <th scope="col">Gross Yield %</th>
+    <th scope="col">Save</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let info of information.properties; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{info.address.address1}}, {{info.address.city}}</td>
+    <td>{{info.physical === null  ? 'no data found' : info.physical.yearBuilt }}</td>
+    <td>{{info.financial === null  ? 'no data found' :  info.financial.listPrice  | currency:'USD':'symbol' }}</td>
+    <td>{{info.financial === null  ? 'no data found' :  info.financial.monthlyRent  |  currency:'USD':'symbol' }}</td>
+    <td>{{info.financial === null  ? 'no data found' :  (info.financial.monthlyRent*12)/ info.financial.listPrice | percent: '1.2-2' }}</td>
+    <td><button type="button" class="btn btn-primary" (click)="SaveInformation(info.id)" [disabled]="ValidateId(info.id)">Save</button></td>
+  </tr>
+  
+</tbody>
+
+</table>
+
+
+<br/>
+
+<div *ngIf="!cargandoMyDB && informationMyDB.length > 0">
+  <h2>My DB</h2>
+
+
+  <table class="table table-striped table-hover mb-5"  >
+      <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Address</th>
+      <th scope="col">Year Built</th>
+      <th scope="col">List Price $</th>
+      <th scope="col">Monthly Rent $</th>
+      <th scope="col">Gross Yield %</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let info of informationMyDB; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{info.address}}</td>
+      <td>{{info.yearBuilt === null  ? 'no data found' : info.yearBuilt }}</td>
+      <td>{{info.listPrice === null  ? 'no data found' :  info.listPrice | currency:'USD':'symbol' }}</td>
+      <td>{{info.monthlyRent === null  ? 'no data found' :  info.monthlyRent  |  currency:'USD':'symbol' }}</td>
+      <td>{{info.monthlyRent === null  ? 'no data found' :  (info.monthlyRent*12)/ info.listPrice | percent: '1.2-2' }}</td>
+    </tr>
+    
+  </tbody>
+  
+  </table>
+</div>
